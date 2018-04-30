@@ -17,6 +17,7 @@
 		F624113420973C3000654BFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F624113220973C3000654BFA /* LaunchScreen.storyboard */; };
 		F624113F20973C3000654BFA /* solo_MissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624113E20973C3000654BFA /* solo_MissionTests.swift */; };
 		F624114A20973C3000654BFA /* solo_MissionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624114920973C3000654BFA /* solo_MissionUITests.swift */; };
+		F624115A2097543400654BFA /* bulletSoundEffect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F62411592097543300654BFA /* bulletSoundEffect.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F624114520973C3000654BFA /* solo MissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "solo MissionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F624114920973C3000654BFA /* solo_MissionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = solo_MissionUITests.swift; sourceTree = "<group>"; };
 		F624114B20973C3000654BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F62411592097543300654BFA /* bulletSoundEffect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bulletSoundEffect.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				F624112720973C2D00654BFA /* Actions.sks */,
 				F624112920973C2D00654BFA /* GameScene.swift */,
 				F624112B20973C2D00654BFA /* GameViewController.swift */,
+				F62411592097543300654BFA /* bulletSoundEffect.mp3 */,
 				F624112D20973C2D00654BFA /* Main.storyboard */,
 				F624113020973C3000654BFA /* Assets.xcassets */,
 				F624113220973C3000654BFA /* LaunchScreen.storyboard */,
@@ -243,6 +246,7 @@
 				F624113120973C3000654BFA /* Assets.xcassets in Resources */,
 				F624113420973C3000654BFA /* LaunchScreen.storyboard in Resources */,
 				F624112820973C2D00654BFA /* Actions.sks in Resources */,
+				F624115A2097543400654BFA /* bulletSoundEffect.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24SM6522LU;
 				INFOPLIST_FILE = "solo Mission/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,7 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24SM6522LU;
 				INFOPLIST_FILE = "solo Mission/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
