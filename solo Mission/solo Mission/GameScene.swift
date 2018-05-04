@@ -13,6 +13,25 @@ class GameScene: SKScene {
     let player = SKSpriteNode(imageNamed: "playerShip")
     let bulletSound = SKAction.playSoundFileNamed("bulletSoundEffect.mp3", waitForCompletion: false)
     
+    var gameAewa: CGRect
+    override init(size: CGSize)
+    {
+        let maxAspectRtio: CGFloat = 16.0/9.0
+        let playableWidth = size.height / maxAspectRtio
+        let margin = (size.width - playableWidth) / 2
+        gameAewa = CGRect(x: margin, y: 0, width: playableWidth, height: size.height)
+        
+        
+        
+        
+        
+        super.init(size: size)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     
     
@@ -51,6 +70,56 @@ class GameScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         fireBullet()
     }
+    
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch: AnyObject in touches{
+            let pointOfTouch = touch.location(in: self)
+            let previousPointOfTouch = touch.previousLocation(in: self)
+            let amountDragged = pointOfTouch.x - previousPointOfTouch.x
+            player.position.x += amountDragged
+            if player.position.x > CGRectGetMixX(gameAewa)
+            {
+                
+            }
+            //    player.position.x = CGRectGetMaxX(gameAewa)
+            
+            
+            
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
