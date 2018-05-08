@@ -13,13 +13,13 @@ class GameScene: SKScene {
     let player = SKSpriteNode(imageNamed: "playerShip")
     let bulletSound = SKAction.playSoundFileNamed("bulletSoundEffect.mp3", waitForCompletion: false)
     
-    var gameAewa: CGRect
+    var gameArea: CGRect
     override init(size: CGSize)
     {
         let maxAspectRtio: CGFloat = 16.0/9.0
         let playableWidth = size.height / maxAspectRtio
         let margin = (size.width - playableWidth) / 2
-        gameAewa = CGRect(x: margin, y: 0, width: playableWidth, height: size.height)
+        gameArea = CGRect(x: margin, y: 0, width: playableWidth, height: size.height)
         
         
         
@@ -78,11 +78,14 @@ class GameScene: SKScene {
             let previousPointOfTouch = touch.previousLocation(in: self)
             let amountDragged = pointOfTouch.x - previousPointOfTouch.x
             player.position.x += amountDragged
-            if player.position.x > CGRectGetMixX(gameAewa)
+            if player.position.x >  gameArea.maxX
             {
-                
+                player.position.x =  gameArea.maxX
             }
-            //    player.position.x = CGRectGetMaxX(gameAewa)
+           if player.position.x <  gameArea.maxX
+            {
+                player.position.x =  gameArea.maxX
+            }
             
             
             
