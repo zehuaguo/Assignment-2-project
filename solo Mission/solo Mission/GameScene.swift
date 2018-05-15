@@ -73,24 +73,19 @@ class GameScene: SKScene {
     
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch: AnyObject in touches{
-            let pointOfTouch = touch.location(in: self)
-            let previousPointOfTouch = touch.previousLocation(in: self)
-            let amountDragged = pointOfTouch.x - previousPointOfTouch.x
-            player.position.x += amountDragged
-            if player.position.x >  gameArea.maxX
-            {
-                player.position.x =  gameArea.maxX
-            }
-           if player.position.x <  gameArea.maxX
-            {
-                player.position.x =  gameArea.maxX
-            }
+       
+        
+        let touch = touches.first!
+        let pointOfTouch = touch.location(in: self)
+        print(player.position.x)
+        print(pointOfTouch.x)
+        player.position.x = pointOfTouch.x //+ 500
+        
+        
             
             
-            
-            
-        }
+        
+    
     }
     
     
